@@ -32,15 +32,12 @@
 
     @@include('./Tasks/_sidenav.html', {
     "path": "../..",
-    "page": "DayGrid",
-    "page_group":"calendar"
+    "page": "simple",
+    "page_group":"Add"
     })
 
     <main class="content">
-        @@include('./Tasks/_topbarWithEntry.html', {
-        "path": "../.."
-        })
-
+      
         <div class="row mt-2">
             <div class="col-7">
                 <div id='calendar'></div>
@@ -106,8 +103,8 @@
 
     </script>
 
-    <script type="module" src="../../Js/Tasks/CommonFuncs/TopbarWithEntry/entryFile.js"></script>
-    <script type="module" src="../../Js/Tasks/DayGridCalendar/entryFile.js"></script>
+    <script type="module" src="../../Js/Add/CommonFuncs/TopbarWithEntry/entryFile.js"></script>
+    <script type="module" src="../../Js/Add/simple/entryFile.js"></script>
 
 </body>
 

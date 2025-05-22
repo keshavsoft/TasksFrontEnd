@@ -63,52 +63,160 @@
                 </a>
             </li>
 
-            <li class="nav-item @@if (context.page === 'calendar') { active }">
-                <a href="./calendar.html" class="nav-link">
-                    <span class="sidebar-icon text-info">
-                        <i class="bi bi-calendar-check"></i>
-                    </span>
-                    <span class="sidebar-text">Calendar</span>
-                </a>
-            </li>
+            <li class="nav-item">
+                <span
+                    class="nav-link @@if (context.page_group !== 'Add') { collapsed } d-flex justify-content-between align-items-center"
+                    data-bs-toggle="collapse" data-bs-target="#submenu-Add">
+                    <span>
+                        <span class="sidebar-icon">
+                            <i class="bi bi-plus icon icon-xs me-2" style="color: #0d6efd;"></i>
 
-            <li class="nav-item @@if (context.page === 'simple') { active }">
-                <a href="./simple.html" class="nav-link">
-                    <span class="sidebar-icon text-success">
-                        <i class="bi bi-calendar-event"></i>
+                        </span>
+                        <span class="sidebar-text">Add</span>
                     </span>
-                    <span class="sidebar-text">Simple</span>
-                </a>
-            </li>
-
-            <li class="nav-item @@if (context.page === 'DayGrid') { active }">
-                <a href="./DayGridCalendar.html" class="nav-link">
-                    <span class="sidebar-icon text-danger">
-                        <i class="bi bi-calendar3-range"></i>
+                    <span class="link-arrow">
+                        <svg class="icon icon-sm" fill="currentColor" viewBox="0 0 20 20"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd"
+                                d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
+                                clip-rule="evenodd"></path>
+                        </svg>
                     </span>
-                    <span class="sidebar-text">DayGrid</span>
-                </a>
+                </span>
+                <div class="multi-level collapse @@if (context.page_group === 'Add') { show }" role="list"
+                    id="submenu-Add" aria-expanded="false">
+                    <ul class="flex-column nav">
+                       
+                        <li class="nav-item @@if (context.page === 'calendar') { active }">
+                            <a class="nav-link" href="@@path/pages/Add/calendar.html">
+                                <span class="sidebar-text">Calendar</span>
+                            </a>
+                        </li>
+                        <li class="nav-item @@if (context.page === 'simple') { active }">
+                            <a class="nav-link" href="@@path/pages/Add/simple.html">
+                                <span class="sidebar-text">Simple</span>
+                            </a>
+                        </li>
+                        <li class="nav-item @@if (context.page === 'DayGrid') { active }">
+                            <a class="nav-link" href="@@path/pages/Add/DayGridCalendar.html">
+                                <span class="sidebar-text">DayGrid</span>
+                            </a>
+                        </li>
+                        <li class="nav-item @@if (context.page === 'WeekDayGrid') { active }">
+                            <a class="nav-link" href="@@path/pages/Add/WeekGridCalendar.html">
+                                <span class="sidebar-text">WeekGrid</span>
+                            </a>
+                        </li>
+                        
+                    </ul>
+                </div>
             </li>
+            <li class="nav-item">
+                <span
+                    class="nav-link @@if (context.page_group !== 'withClass') { collapsed } d-flex justify-content-between align-items-center"
+                    data-bs-toggle="collapse" data-bs-target="#submenu-withClass">
+                    <span>
+                        <span class="sidebar-icon">
+                           <i class="bi bi-plus-circle-fill icon icon-xs me-2" ></i>
 
-            <li class="nav-item @@if (context.page === 'WeekDayGrid') { active }">
-                <a href="./WeekGridCalendar.html" class="nav-link">
-                    <span class="sidebar-icon text-warning">
-                        <i class="bi bi-calendar-week"></i>
+                        </span>
+                        <span class="sidebar-text">WithClass</span>
                     </span>
-                    <span class="sidebar-text">Week DayGrid</span>
-                </a>
+                    <span class="link-arrow">
+                        <svg class="icon icon-sm" fill="currentColor" viewBox="0 0 20 20"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd"
+                                d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
+                                clip-rule="evenodd"></path>
+                        </svg>
+                    </span>
+                </span>
+                <div class="multi-level collapse @@if (context.page_group === 'withClass') { show }" role="list"
+                    id="submenu-withClass" aria-expanded="false">
+                    <ul class="flex-column nav">
+                       
+                        <li class="nav-item @@if (context.page === 'calendar') { active }">
+                            <a class="nav-link" href="@@path/pages/withClass/calendar.html">
+                                <span class="sidebar-text">Calendar</span>
+                            </a>
+                        </li>
+                        <li class="nav-item @@if (context.page === 'simple') { active }">
+                            <a class="nav-link" href="@@path/pages/withClass/simple.html">
+                                <span class="sidebar-text">Simple</span>
+                            </a>
+                        </li>
+                        <li class="nav-item @@if (context.page === 'DayGrid') { active }">
+                            <a class="nav-link" href="@@path/pages/withClass/DayGridCalendar.html">
+                                <span class="sidebar-text">DayGrid</span>
+                            </a>
+                        </li>
+                        <li class="nav-item @@if (context.page === 'WeekDayGrid') { active }">
+                            <a class="nav-link" href="@@path/pages/withClass/WeekGridCalendar.html">
+                                <span class="sidebar-text">WeekGrid</span>
+                            </a>
+                        </li>
+                        
+                    </ul>
+                </div>
             </li>
+            <li class="nav-item">
+                <span
+                    class="nav-link @@if (context.page_group !== 'withOutClass') { collapsed } d-flex justify-content-between align-items-center"
+                    data-bs-toggle="collapse" data-bs-target="#submenu-withOutClass">
+                    <span>
+                        <span class="sidebar-icon">
+                           <i class="bi bi-plus-circle-fill icon icon-xs me-2" ></i>
 
+                        </span>
+                        <span class="sidebar-text">WithOutClass</span>
+                    </span>
+                    <span class="link-arrow">
+                        <svg class="icon icon-sm" fill="currentColor" viewBox="0 0 20 20"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd"
+                                d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
+                                clip-rule="evenodd"></path>
+                        </svg>
+                    </span>
+                </span>
+                <div class="multi-level collapse @@if (context.page_group === 'withOutClass') { show }" role="list"
+                    id="submenu-withOutClass" aria-expanded="false">
+                    <ul class="flex-column nav">
+                       
+                        <li class="nav-item @@if (context.page === 'calendar') { active }">
+                            <a class="nav-link" href="@@path/pages/withOutClass/calendar.html">
+                                <span class="sidebar-text">Calendar</span>
+                            </a>
+                        </li>
+                        <li class="nav-item @@if (context.page === 'simple') { active }">
+                            <a class="nav-link" href="@@path/pages/withOutClass/simple.html">
+                                <span class="sidebar-text">Simple</span>
+                            </a>
+                        </li>
+                        <li class="nav-item @@if (context.page === 'DayGrid') { active }">
+                            <a class="nav-link" href="@@path/pages/withOutClass/DayGridCalendar.html">
+                                <span class="sidebar-text">DayGrid</span>
+                            </a>
+                        </li>
+                        <li class="nav-item @@if (context.page === 'WeekDayGrid') { active }">
+                            <a class="nav-link" href="@@path/pages/withOutClass/WeekGridCalendar.html">
+                                <span class="sidebar-text">WeekGrid</span>
+                            </a>
+                        </li>
+                        
+                    </ul>
+                </div>
+            </li>
 
             <li role="separator" class="dropdown-divider mt-4 mb-3 border-gray-700"></li>
 
-           <li class="nav-item"><a href="#" class="nav-link" id="ToLocalStorageId"><i
-                            class="bi bi-file-earmark-arrow-up-fill" style="color: rgb(165, 240, 14);"></i>
-                        </span><span class="sidebar-text">To LocalStorage</span></a></li>
-                <li class="nav-item"><a href="#" class="nav-link" id="FromLocalStorageId"><i
-                            class="bi bi-file-earmark-arrow-down" style="color: rgb(18, 149, 145);"></i>
-                        </span><span class="sidebar-text">From LocalStorage</span></a></li>
-                </a>
+            <li class="nav-item"><a href="#" class="nav-link" id="ToLocalStorageId"><i
+                        class="bi bi-file-earmark-arrow-up-fill" style="color: rgb(165, 240, 14);"></i>
+                    </span><span class="sidebar-text">To LocalStorage</span></a></li>
+            <li class="nav-item"><a href="#" class="nav-link" id="FromLocalStorageId"><i
+                        class="bi bi-file-earmark-arrow-down" style="color: rgb(18, 149, 145);"></i>
+                    </span><span class="sidebar-text">From LocalStorage</span></a></li>
+            </a>
             </li>
         </ul>
     </div>
