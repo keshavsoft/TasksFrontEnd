@@ -4,6 +4,8 @@ let StartFunc = () => {
     let jVarLocalBody = {};
     jVarLocalBody.title = jFLocalTopBarTaskId();
     jVarLocalBody.start = jFLocalTopBarDateId();
+    jVarLocalBody.className =jFLocalTopBarClassId();
+
     StartFuncFromAddToDomCalendar({ inEvent: jVarLocalBody });
 
     console.log("jVarLocalBody : ", jVarLocalBody);
@@ -26,6 +28,15 @@ let jFLocalTopBarDateId = () => {
 
     if (jVarLocalHtmlId === null === false) {
         return jVarLocalHtmlId.value.trim();
+    };
+};
+
+let jFLocalTopBarClassId = () => {
+    let jVarLocalTopBarClassId = 'TopBarClassId'
+    let jVarLocalHtmlId = document.getElementById(jVarLocalTopBarClassId);
+
+    if (jVarLocalHtmlId === null === false) {
+    return jVarLocalHtmlId.value.trim();
     };
 };
 
