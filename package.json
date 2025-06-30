@@ -1,6 +1,6 @@
 {
     "name": "TasksFrontEnd",
-    "version": "1.4.1",
+    "version": "1.4.2",
     "description": "Tasks frontend with calendar",
     "main": "gulpfile.js",
     "author": "Themesberg",
@@ -18,6 +18,10 @@
         "bootstrap 5 datepicker",
         "bootstrap 5 beta 1"
     ],
+    "scripts": {
+        "dist": "gulp build:dist",
+        "dev": "gulp"
+    },
     "homepage": "https://themesberg.com/product/admin-dashboard/volt-bootstrap-5-dashboard",
     "bugs": {
         "url": "https://github.com/themesberg/volt-bootstrap-5-dashboard/issues"
